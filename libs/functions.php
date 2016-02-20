@@ -14,7 +14,7 @@ function saveData($db, $data) {
 
 				$db->insert($sql,
 							$cur['id'],
-							$cur['url'],
+							$cur['html_url'],
 							$cur['name'],
 							$cur['full_name'],
 							date("Y-m-d H:i:s", strtotime($cur['created_at'])),
@@ -25,7 +25,7 @@ function saveData($db, $data) {
 				$sql = "UPDATE `victr`.`repos` SET `url` = ?, `name` = ?, `full_name` = ?, `created_at` = ?, `pushed_at` = ?, `desc` = ?, `stars` = ? WHERE `id` = ?";
 
 				$db->execute($sql,
-							$cur['url'],
+							$cur['html_url'],
 							$cur['name'],
 							$cur['full_name'],
 							date("Y-m-d H:i:s", strtotime($cur['created_at'])),
