@@ -5,7 +5,11 @@
 
 	// Include Libraries
 	require "api/github_search.php";
+	require "libs/database.php";
 
+
+
+	// Init and run the github api query
 	$github = new Github();
 	$github->executeSearch();
 
