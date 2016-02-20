@@ -1,13 +1,13 @@
 <?php
 
 class Github {
-	private $github_user = "";
-	private $github_pass = "";
+	private $github_user = "veracity4life";
+	private $github_pass = "EternallySunshinE86";
 	
 	protected $api_url = "https://api.github.com/search/repositories?";
+	protected $api_query;
 
-	protected $api_query;	
-	protected $query_result;
+	public $query_result;
 
 	public function __construct() {
 		// Set up class to execute API call
@@ -31,14 +31,8 @@ class Github {
 		// IF successful API call save data to DB
 		if(!$this->query_result) {
 			die("False read from github.");
-		} else {
-			$this->saveData();
 		}
 		
 	}
-	
-	private function saveData() {
-		// Save/Update data to/in DB
-		
-	}
+
 }
