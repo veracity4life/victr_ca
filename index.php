@@ -15,6 +15,9 @@
 	$github = new Github();
 	$db = new Database();
 
+	if(isset($_GET['data']) && $_GET['data'] == "refresh") {
+		Session::clear("api_victr");
+	}
 
 	// Check for session - If no session, set session and get data
 	if(!Session::get("api_victr")) {
