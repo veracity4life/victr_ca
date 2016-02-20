@@ -1,8 +1,8 @@
 <?php
 
 class Github {
-	private $github_user = "veracity4life";
-	private $github_pass = "EternallySunshinE86";
+	private $github_user = "";
+	private $github_pass = "";
 	
 	protected $api_url = "https://api.github.com/search/repositories?";
 	protected $api_query;
