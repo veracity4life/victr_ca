@@ -1,6 +1,7 @@
 <?php
 
 class Github {
+	// github user and pass needed for auth
 	private $github_user = "";
 	private $github_pass = "";
 	
@@ -28,7 +29,7 @@ class Github {
 		$this->query_result = curl_exec ($curl);
 		curl_close ($curl);
 	
-		// IF successful API call save data to DB
+		// Check for query, fail badly
 		if(!$this->query_result) {
 			die("False read from github.");
 		}
