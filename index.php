@@ -6,6 +6,9 @@
 	// Include Libraries
 	require "api/github_search.php";
 
+	$github = new Github();
+	$github->executeSearch();
+
 
 	
 	// Build View
