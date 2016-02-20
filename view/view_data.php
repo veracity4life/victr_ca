@@ -29,7 +29,7 @@ $data = $db->get_array("SELECT `uid`, `id`, `url`, `name`, `full_name`, DATE_FOR
 							</tr>
 							<tr>
 								<th>URL</th>
-								<td><?= $value[2] ?></td>
+								<td><a href="<?= $value[2] ?>"><?= $value[2] ?></a></td>
 							</tr>
 							<tr>
 								<th>Date Created</th>
